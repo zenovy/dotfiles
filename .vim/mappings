@@ -1,0 +1,26 @@
+"Movement
+nnoremap <up> <c-y>
+nnoremap <down> <c-e>
+nnoremap <c-down> <c-d>
+nnoremap <c-up> <c-u>
+nnoremap <c-j> <c-e>
+nnoremap <c-k> <c-y>
+nnoremap } }zz
+nnoremap { {zz
+
+"Formatting
+nnoremap zk maO<esc>k`a
+nnoremap zj mao<esc>k`a
+
+"Mode Changes
+nnoremap <esc> :noh<return><esc>
+inoremap jj <esc>
+
+"Saving, Editing
+nnoremap <Leader>ev :e $HOME\_vimrc <return>
+nnoremap ;; :w<cr>
+inoremap ;; <esc>:w<cr>
+
+"Old Habits Die Hard
+inoremap <backspace> <esc>xi
+inoremap <c-BS> <esc>dBxi
