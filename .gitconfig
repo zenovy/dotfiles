@@ -1,0 +1,33 @@
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[user]
+	name = Rory Sametz
+	email = rory.sametz+github@gmail.com
+[credential]
+[core]
+	autocrlf = true
+	safecrlf = false
+	pager = cat
+	editor = vim
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  rebaseme = pull --rebase upstream master
+  pushme = push origin master
+  unstage = reset HEAD -- 
+  clonemy = "! f() { git clone https://github.com/zenovy/$1 $2; }; f "        
+
+[credential]
+	helper = wincred
+
+[url "https://github.com/"]
+  insteadof = gh:
+
